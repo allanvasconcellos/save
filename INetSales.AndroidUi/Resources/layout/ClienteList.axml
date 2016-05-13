@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Filtro"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvFiltro"
+        android:layout_marginTop="20dp"
+        style="@style/label_input" />
+    <EditText
+        android:id="@+id/edtFiltro"
+        style="@style/input_filter" />
+    <CheckBox
+        android:id="@+id/chkComRoteiro"
+        android:text="Com roteiro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lvCliente" />
+    <TextView
+        android:text="Nenhum cliente encontrado"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:id="@+id/tvMsgSemCliente"
+        android:visibility="invisible"
+        android:layout_marginTop="50.0dp" />
+</LinearLayout>

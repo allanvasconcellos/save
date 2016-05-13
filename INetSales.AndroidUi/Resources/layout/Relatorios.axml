@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="20dip"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <Button 
+    android:text="Relatório de força de venda - Quantidades"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dip"
+    android:id="@+id/btnRelQuantidades"/>
+
+  <Button
+    android:text="Relatório de força de venda - Quantidades x Valor"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnRelQtdValor"/>
+
+  <Button
+    android:text="Relatório de força de venda - Vendas"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnRelVendas"/>
+
+</LinearLayout>

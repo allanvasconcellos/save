@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservice.myse.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="IntegraWS" targetNamespace="http://webservice.myse.com.br/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://inet.integratornet.com.br:8080/1.5/IntegraWS?xsd=1" namespace="http://webservice.myse.com.br/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </types>
+  <message name="setProduto">
+    <part name="parameters" element="tns:setProduto" />
+  </message>
+  <message name="setProdutoResponse">
+    <part name="parameters" element="tns:setProdutoResponse" />
+  </message>
+  <message name="deletaPrecoProduto">
+    <part name="parameters" element="tns:deletaPrecoProduto" />
+  </message>
+  <message name="deletaPrecoProdutoResponse">
+    <part name="parameters" element="tns:deletaPrecoProdutoResponse" />
+  </message>
+  <message name="setEstoquePreco">
+    <part name="parameters" element="tns:setEstoquePreco" />
+  </message>
+  <message name="setEstoquePrecoResponse">
+    <part name="parameters" element="tns:setEstoquePrecoResponse" />
+  </message>
+  <message name="setPromocao">
+    <part name="parameters" element="tns:setPromocao" />
+  </message>
+  <message name="setPromocaoResponse">
+    <part name="parameters" element="tns:setPromocaoResponse" />
+  </message>
+  <message name="setContas">
+    <part name="parameters" element="tns:setContas" />
+  </message>
+  <message name="setContasResponse">
+    <part name="parameters" element="tns:setContasResponse" />
+  </message>
+  <message name="setVendedor">
+    <part name="parameters" element="tns:setVendedor" />
+  </message>
+  <message name="setVendedorResponse">
+    <part name="parameters" element="tns:setVendedorResponse" />
+  </message>
+  <message name="setCategoria">
+    <part name="parameters" element="tns:setCategoria" />
+  </message>
+  <message name="setCategoriaResponse">
+    <part name="parameters" element="tns:setCategoriaResponse" />
+  </message>
+  <message name="setCondicaoPagamento">
+    <part name="parameters" element="tns:setCondicaoPagamento" />
+  </message>
+  <message name="setCondicaoPagamentoResponse">
+    <part name="parameters" element="tns:setCondicaoPagamentoResponse" />
+  </message>
+  <message name="setTabelaPreco">
+    <part name="parameters" element="tns:setTabelaPreco" />
+  </message>
+  <message name="setTabelaPrecoResponse">
+    <part name="parameters" element="tns:setTabelaPrecoResponse" />
+  </message>
+  <message name="setStatCliente">
+    <part name="parameters" element="tns:setStatCliente" />
+  </message>
+  <message name="setStatClienteResponse">
+    <part name="parameters" element="tns:setStatClienteResponse" />
+  </message>
+  <message name="setStatClienteProduto">
+    <part name="parameters" element="tns:setStatClienteProduto" />
+  </message>
+  <message name="setStatClienteProdutoResponse">
+    <part name="parameters" element="tns:setStatClienteProdutoResponse" />
+  </message>
+  <message name="setPreco">
+    <part name="parameters" element="tns:setPreco" />
+  </message>
+  <message name="setPrecoResponse">
+    <part name="parameters" element="tns:setPrecoResponse" />
+  </message>
+  <message name="login">
+    <part name="parameters" element="tns:login" />
+  </message>
+  <message name="loginResponse">
+    <part name="parameters" element="tns:loginResponse" />
+  </message>
+  <message name="setPacoteNota">
+    <part name="parameters" element="tns:setPacoteNota" />
+  </message>
+  <message name="setPacoteNotaResponse">
+    <part name="parameters" element="tns:setPacoteNotaResponse" />
+  </message>
+  <message name="consultaProcessamentoNFePedido">
+    <part name="parameters" element="tns:consultaProcessamentoNFePedido" />
+  </message>
+  <message name="consultaProcessamentoNFePedidoResponse">
+    <part name="parameters" element="tns:consultaProcessamentoNFePedidoResponse" />
+  </message>
+  <message name="getBoleto">
+    <part name="parameters" element="tns:getBoleto" />
+  </message>
+  <message name="getBoletoResponse">
+    <part name="parameters" element="tns:getBoletoResponse" />
+  </message>
+  <message name="getIDUltimoCupomFiscal">
+    <part name="parameters" element="tns:getIDUltimoCupomFiscal" />
+  </message>
+  <message name="getIDUltimoCupomFiscalResponse">
+    <part name="parameters" element="tns:getIDUltimoCupomFiscalResponse" />
+  </message>
+  <message name="getPacoteEstoque">
+    <part name="parameters" element="tns:getPacoteEstoque" />
+  </message>
+  <message name="getPacoteEstoqueResponse">
+    <part name="parameters" element="tns:getPacoteEstoqueResponse" />
+  </message>
+  <message name="getPreco">
+    <part name="parameters" element="tns:getPreco" />
+  </message>
+  <message name="getPrecoResponse">
+    <part name="parameters" element="tns:getPrecoResponse" />
+  </message>
+  <message name="getProduto">
+    <part name="parameters" element="tns:getProduto" />
+  </message>
+  <message name="getProdutoResponse">
+    <part name="parameters" element="tns:getProdutoResponse" />
+  </message>
+  <message name="getProdutoNovo">
+    <part name="parameters" element="tns:getProdutoNovo" />
+  </message>
+  <message name="getProdutoNovoResponse">
+    <part name="parameters" element="tns:getProdutoNovoResponse" />
+  </message>
+  <message name="getCliente">
+    <part name="parameters" element="tns:getCliente" />
+  </message>
+  <message name="getClienteResponse">
+    <part name="parameters" element="tns:getClienteResponse" />
+  </message>
+  <message name="setPedido">
+    <part name="parameters" element="tns:setPedido" />
+  </message>
+  <message name="setPedidoResponse">
+    <part name="parameters" element="tns:setPedidoResponse" />
+  </message>
+  <message name="setStatusPedido">
+    <part name="parameters" element="tns:setStatusPedido" />
+  </message>
+  <message name="setStatusPedidoResponse">
+    <part name="parameters" element="tns:setStatusPedidoResponse" />
+  </message>
+  <message name="setPedidoSincronizado">
+    <part name="parameters" element="tns:setPedidoSincronizado" />
+  </message>
+  <message name="setPedidoSincronizadoResponse">
+    <part name="parameters" element="tns:setPedidoSincronizadoResponse" />
+  </message>
+  <message name="setLevantamentoPedidoSincronizado">
+    <part name="parameters" element="tns:setLevantamentoPedidoSincronizado" />
+  </message>
+  <message name="setLevantamentoPedidoSincronizadoResponse">
+    <part name="parameters" element="tns:setLevantamentoPedidoSincronizadoResponse" />
+  </message>
+  <message name="getPedido">
+    <part name="parameters" element="tns:getPedido" />
+  </message>
+  <message name="getPedidoResponse">
+    <part name="parameters" element="tns:getPedidoResponse" />
+  </message>
+  <message name="getLevantamentoEstoquePedido">
+    <part name="parameters" element="tns:getLevantamentoEstoquePedido" />
+  </message>
+  <message name="getLevantamentoEstoquePedidoResponse">
+    <part name="parameters" element="tns:getLevantamentoEstoquePedidoResponse" />
+  </message>
+  <message name="setCliente">
+    <part name="parameters" element="tns:setCliente" />
+  </message>
+  <message name="setClienteResponse">
+    <part name="parameters" element="tns:setClienteResponse" />
+  </message>
+  <message name="setMixCliente">
+    <part name="parameters" element="tns:setMixCliente" />
+  </message>
+  <message name="setMixClienteResponse">
+    <part name="parameters" element="tns:setMixClienteResponse" />
+  </message>
+  <message name="getUsuario">
+    <part name="parameters" element="tns:getUsuario" />
+  </message>
+  <message name="getUsuarioResponse">
+    <part name="parameters" element="tns:getUsuarioResponse" />
+  </message>
+  <message name="getCondicaoPagamento">
+    <part name="parameters" element="tns:getCondicaoPagamento" />
+  </message>
+  <message name="getCondicaoPagamentoResponse">
+    <part name="parameters" element="tns:getCondicaoPagamentoResponse" />
+  </message>
+  <message name="getRamoNegocio">
+    <part name="parameters" element="tns:getRamoNegocio" />
+  </message>
+  <message name="getRamoNegocioResponse">
+    <part name="parameters" element="tns:getRamoNegocioResponse" />
+  </message>
+  <message name="getRoteiro">
+    <part name="parameters" element="tns:getRoteiro" />
+  </message>
+  <message name="getRoteiroResponse">
+    <part name="parameters" element="tns:getRoteiroResponse" />
+  </message>
+  <message name="getRemessa">
+    <part name="parameters" element="tns:getRemessa" />
+  </message>
+  <message name="getRemessaResponse">
+    <part name="parameters" element="tns:getRemessaResponse" />
+  </message>
+  <message name="setLatitudeLongitudeVendedor">
+    <part name="parameters" element="tns:setLatitudeLongitudeVendedor" />
+  </message>
+  <message name="setLatitudeLongitudeVendedorResponse">
+    <part name="parameters" element="tns:setLatitudeLongitudeVendedorResponse" />
+  </message>
+  <message name="getCategoria">
+    <part name="parameters" element="tns:getCategoria" />
+  </message>
+  <message name="getCategoriaResponse">
+    <part name="parameters" element="tns:getCategoriaResponse" />
+  </message>
+  <message name="getCidade">
+    <part name="parameters" element="tns:getCidade" />
+  </message>
+  <message name="getCidadeResponse">
+    <part name="parameters" element="tns:getCidadeResponse" />
+  </message>
+  <message name="getFechamentos">
+    <part name="parameters" element="tns:getFechamentos" />
+  </message>
+  <message name="getFechamentosResponse">
+    <part name="parameters" element="tns:getFechamentosResponse" />
+  </message>
+  <message name="getCupomFiscalAguardandoImpressao">
+    <part name="parameters" element="tns:getCupomFiscalAguardandoImpressao" />
+  </message>
+  <message name="getCupomFiscalAguardandoImpressaoResponse">
+    <part name="parameters" element="tns:getCupomFiscalAguardandoImpressaoResponse" />
+  </message>
+  <message name="getItensPedidoAguardandoImpressao">
+    <part name="parameters" element="tns:getItensPedidoAguardandoImpressao" />
+  </message>
+  <message name="getItensPedidoAguardandoImpressaoResponse">
+    <part name="parameters" element="tns:getItensPedidoAguardandoImpressaoResponse" />
+  </message>
+  <message name="getImpressoraTicket">
+    <part name="parameters" element="tns:getImpressoraTicket" />
+  </message>
+  <message name="getImpressoraTicketResponse">
+    <part name="parameters" element="tns:getImpressoraTicketResponse" />
+  </message>
+  <message name="getImpressoraTicketETPImpressao">
+    <part name="parameters" element="tns:getImpressoraTicketETPImpressao" />
+  </message>
+  <message name="getImpressoraTicketETPImpressaoResponse">
+    <part name="parameters" element="tns:getImpressoraTicketETPImpressaoResponse" />
+  </message>
+  <message name="setOportunidade">
+    <part name="parameters" element="tns:setOportunidade" />
+  </message>
+  <message name="setOportunidadeResponse">
+    <part name="parameters" element="tns:setOportunidadeResponse" />
+  </message>
+  <message name="isCPF_CNPJCadastrado">
+    <part name="parameters" element="tns:isCPF_CNPJCadastrado" />
+  </message>
+  <message name="isCPF_CNPJCadastradoResponse">
+    <part name="parameters" element="tns:isCPF_CNPJCadastradoResponse" />
+  </message>
+  <message name="setVisita">
+    <part name="parameters" element="tns:setVisita" />
+  </message>
+  <message name="setVisitaResponse">
+    <part name="parameters" element="tns:setVisitaResponse" />
+  </message>
+  <message name="setDTUltimaSincronizacao">
+    <part name="parameters" element="tns:setDTUltimaSincronizacao" />
+  </message>
+  <message name="setDTUltimaSincronizacaoResponse">
+    <part name="parameters" element="tns:setDTUltimaSincronizacaoResponse" />
+  </message>
+  <message name="getDTUltimaSincronizacao">
+    <part name="parameters" element="tns:getDTUltimaSincronizacao" />
+  </message>
+  <message name="getDTUltimaSincronizacaoResponse">
+    <part name="parameters" element="tns:getDTUltimaSincronizacaoResponse" />
+  </message>
+  <message name="setCupomFiscal">
+    <part name="parameters" element="tns:setCupomFiscal" />
+  </message>
+  <message name="setCupomFiscalResponse">
+    <part name="parameters" element="tns:setCupomFiscalResponse" />
+  </message>
+  <message name="cancelaCupomFiscal">
+    <part name="parameters" element="tns:cancelaCupomFiscal" />
+  </message>
+  <message name="cancelaCupomFiscalResponse">
+    <part name="parameters" element="tns:cancelaCupomFiscalResponse" />
+  </message>
+  <message name="setCupomFiscalImpresso">
+    <part name="parameters" element="tns:setCupomFiscalImpresso" />
+  </message>
+  <message name="setCupomFiscalImpressoResponse">
+    <part name="parameters" element="tns:setCupomFiscalImpressoResponse" />
+  </message>
+  <message name="setItemCupomFiscalImpresso">
+    <part name="parameters" element="tns:setItemCupomFiscalImpresso" />
+  </message>
+  <message name="setItemCupomFiscalImpressoResponse">
+    <part name="parameters" element="tns:setItemCupomFiscalImpressoResponse" />
+  </message>
+  <message name="getProdutoPesquisa">
+    <part name="parameters" element="tns:getProdutoPesquisa" />
+  </message>
+  <message name="getProdutoPesquisaResponse">
+    <part name="parameters" element="tns:getProdutoPesquisaResponse" />
+  </message>
+  <message name="getVisita">
+    <part name="parameters" element="tns:getVisita" />
+  </message>
+  <message name="getVisitaResponse">
+    <part name="parameters" element="tns:getVisitaResponse" />
+  </message>
+  <message name="getRelatorioPedido">
+    <part name="parameters" element="tns:getRelatorioPedido" />
+  </message>
+  <message name="getRelatorioPedidoResponse">
+    <part name="parameters" element="tns:getRelatorioPedidoResponse" />
+  </message>
+  <message name="getRelatorioFaturamentoProdutoPorCategoria">
+    <part name="parameters" element="tns:getRelatorioFaturamentoProdutoPorCategoria" />
+  </message>
+  <message name="getRelatorioFaturamentoProdutoPorCategoriaResponse">
+    <part name="parameters" element="tns:getRelatorioFaturamentoProdutoPorCategoriaResponse" />
+  </message>
+  <message name="getRelatorioContas">
+    <part name="parameters" element="tns:getRelatorioContas" />
+  </message>
+  <message name="getRelatorioContasResponse">
+    <part name="parameters" element="tns:getRelatorioContasResponse" />
+  </message>
+  <message name="setRota">
+    <part name="parameters" element="tns:setRota" />
+  </message>
+  <message name="setRotaResponse">
+    <part name="parameters" element="tns:setRotaResponse" />
+  </message>
+  <portType name="IntegraWS">
+    <operation name="setProduto">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setProdutoRequest" message="tns:setProduto" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setProdutoResponse" message="tns:setProdutoResponse" />
+    </operation>
+    <operation name="deletaPrecoProduto">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/deletaPrecoProdutoRequest" message="tns:deletaPrecoProduto" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/deletaPrecoProdutoResponse" message="tns:deletaPrecoProdutoResponse" />
+    </operation>
+    <operation name="setEstoquePreco">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setEstoquePrecoRequest" message="tns:setEstoquePreco" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setEstoquePrecoResponse" message="tns:setEstoquePrecoResponse" />
+    </operation>
+    <operation name="setPromocao">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setPromocaoRequest" message="tns:setPromocao" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setPromocaoResponse" message="tns:setPromocaoResponse" />
+    </operation>
+    <operation name="setContas">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setContasRequest" message="tns:setContas" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setContasResponse" message="tns:setContasResponse" />
+    </operation>
+    <operation name="setVendedor">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setVendedorRequest" message="tns:setVendedor" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setVendedorResponse" message="tns:setVendedorResponse" />
+    </operation>
+    <operation name="setCategoria">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setCategoriaRequest" message="tns:setCategoria" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setCategoriaResponse" message="tns:setCategoriaResponse" />
+    </operation>
+    <operation name="setCondicaoPagamento">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setCondicaoPagamentoRequest" message="tns:setCondicaoPagamento" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setCondicaoPagamentoResponse" message="tns:setCondicaoPagamentoResponse" />
+    </operation>
+    <operation name="setTabelaPreco">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setTabelaPrecoRequest" message="tns:setTabelaPreco" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setTabelaPrecoResponse" message="tns:setTabelaPrecoResponse" />
+    </operation>
+    <operation name="setStatCliente">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setStatClienteRequest" message="tns:setStatCliente" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setStatClienteResponse" message="tns:setStatClienteResponse" />
+    </operation>
+    <operation name="setStatClienteProduto">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setStatClienteProdutoRequest" message="tns:setStatClienteProduto" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setStatClienteProdutoResponse" message="tns:setStatClienteProdutoResponse" />
+    </operation>
+    <operation name="setPreco">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setPrecoRequest" message="tns:setPreco" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setPrecoResponse" message="tns:setPrecoResponse" />
+    </operation>
+    <operation name="login">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/loginRequest" message="tns:login" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/loginResponse" message="tns:loginResponse" />
+    </operation>
+    <operation name="setPacoteNota">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setPacoteNotaRequest" message="tns:setPacoteNota" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setPacoteNotaResponse" message="tns:setPacoteNotaResponse" />
+    </operation>
+    <operation name="consultaProcessamentoNFePedido">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/consultaProcessamentoNFePedidoRequest" message="tns:consultaProcessamentoNFePedido" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/consultaProcessamentoNFePedidoResponse" message="tns:consultaProcessamentoNFePedidoResponse" />
+    </operation>
+    <operation name="getBoleto">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getBoletoRequest" message="tns:getBoleto" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getBoletoResponse" message="tns:getBoletoResponse" />
+    </operation>
+    <operation name="getIDUltimoCupomFiscal">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getIDUltimoCupomFiscalRequest" message="tns:getIDUltimoCupomFiscal" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getIDUltimoCupomFiscalResponse" message="tns:getIDUltimoCupomFiscalResponse" />
+    </operation>
+    <operation name="getPacoteEstoque">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getPacoteEstoqueRequest" message="tns:getPacoteEstoque" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getPacoteEstoqueResponse" message="tns:getPacoteEstoqueResponse" />
+    </operation>
+    <operation name="getPreco">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getPrecoRequest" message="tns:getPreco" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getPrecoResponse" message="tns:getPrecoResponse" />
+    </operation>
+    <operation name="getProduto">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getProdutoRequest" message="tns:getProduto" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getProdutoResponse" message="tns:getProdutoResponse" />
+    </operation>
+    <operation name="getProdutoNovo">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getProdutoNovoRequest" message="tns:getProdutoNovo" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getProdutoNovoResponse" message="tns:getProdutoNovoResponse" />
+    </operation>
+    <operation name="getCliente">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getClienteRequest" message="tns:getCliente" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getClienteResponse" message="tns:getClienteResponse" />
+    </operation>
+    <operation name="setPedido">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setPedidoRequest" message="tns:setPedido" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setPedidoResponse" message="tns:setPedidoResponse" />
+    </operation>
+    <operation name="setStatusPedido">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setStatusPedidoRequest" message="tns:setStatusPedido" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setStatusPedidoResponse" message="tns:setStatusPedidoResponse" />
+    </operation>
+    <operation name="setPedidoSincronizado">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setPedidoSincronizadoRequest" message="tns:setPedidoSincronizado" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setPedidoSincronizadoResponse" message="tns:setPedidoSincronizadoResponse" />
+    </operation>
+    <operation name="setLevantamentoPedidoSincronizado">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setLevantamentoPedidoSincronizadoRequest" message="tns:setLevantamentoPedidoSincronizado" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setLevantamentoPedidoSincronizadoResponse" message="tns:setLevantamentoPedidoSincronizadoResponse" />
+    </operation>
+    <operation name="getPedido">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getPedidoRequest" message="tns:getPedido" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getPedidoResponse" message="tns:getPedidoResponse" />
+    </operation>
+    <operation name="getLevantamentoEstoquePedido">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getLevantamentoEstoquePedidoRequest" message="tns:getLevantamentoEstoquePedido" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getLevantamentoEstoquePedidoResponse" message="tns:getLevantamentoEstoquePedidoResponse" />
+    </operation>
+    <operation name="setCliente">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setClienteRequest" message="tns:setCliente" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setClienteResponse" message="tns:setClienteResponse" />
+    </operation>
+    <operation name="setMixCliente">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setMixClienteRequest" message="tns:setMixCliente" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setMixClienteResponse" message="tns:setMixClienteResponse" />
+    </operation>
+    <operation name="getUsuario">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getUsuarioRequest" message="tns:getUsuario" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getUsuarioResponse" message="tns:getUsuarioResponse" />
+    </operation>
+    <operation name="getCondicaoPagamento">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getCondicaoPagamentoRequest" message="tns:getCondicaoPagamento" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getCondicaoPagamentoResponse" message="tns:getCondicaoPagamentoResponse" />
+    </operation>
+    <operation name="getRamoNegocio">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getRamoNegocioRequest" message="tns:getRamoNegocio" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getRamoNegocioResponse" message="tns:getRamoNegocioResponse" />
+    </operation>
+    <operation name="getRoteiro">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getRoteiroRequest" message="tns:getRoteiro" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getRoteiroResponse" message="tns:getRoteiroResponse" />
+    </operation>
+    <operation name="getRemessa">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getRemessaRequest" message="tns:getRemessa" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getRemessaResponse" message="tns:getRemessaResponse" />
+    </operation>
+    <operation name="setLatitudeLongitudeVendedor">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setLatitudeLongitudeVendedorRequest" message="tns:setLatitudeLongitudeVendedor" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setLatitudeLongitudeVendedorResponse" message="tns:setLatitudeLongitudeVendedorResponse" />
+    </operation>
+    <operation name="getCategoria">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getCategoriaRequest" message="tns:getCategoria" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getCategoriaResponse" message="tns:getCategoriaResponse" />
+    </operation>
+    <operation name="getCidade">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getCidadeRequest" message="tns:getCidade" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getCidadeResponse" message="tns:getCidadeResponse" />
+    </operation>
+    <operation name="getFechamentos">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getFechamentosRequest" message="tns:getFechamentos" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getFechamentosResponse" message="tns:getFechamentosResponse" />
+    </operation>
+    <operation name="getCupomFiscalAguardandoImpressao">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getCupomFiscalAguardandoImpressaoRequest" message="tns:getCupomFiscalAguardandoImpressao" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getCupomFiscalAguardandoImpressaoResponse" message="tns:getCupomFiscalAguardandoImpressaoResponse" />
+    </operation>
+    <operation name="getItensPedidoAguardandoImpressao">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getItensPedidoAguardandoImpressaoRequest" message="tns:getItensPedidoAguardandoImpressao" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getItensPedidoAguardandoImpressaoResponse" message="tns:getItensPedidoAguardandoImpressaoResponse" />
+    </operation>
+    <operation name="getImpressoraTicket">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getImpressoraTicketRequest" message="tns:getImpressoraTicket" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getImpressoraTicketResponse" message="tns:getImpressoraTicketResponse" />
+    </operation>
+    <operation name="getImpressoraTicketETPImpressao">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getImpressoraTicketETPImpressaoRequest" message="tns:getImpressoraTicketETPImpressao" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getImpressoraTicketETPImpressaoResponse" message="tns:getImpressoraTicketETPImpressaoResponse" />
+    </operation>
+    <operation name="setOportunidade">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setOportunidadeRequest" message="tns:setOportunidade" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setOportunidadeResponse" message="tns:setOportunidadeResponse" />
+    </operation>
+    <operation name="isCPF_CNPJCadastrado">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/isCPF_CNPJCadastradoRequest" message="tns:isCPF_CNPJCadastrado" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/isCPF_CNPJCadastradoResponse" message="tns:isCPF_CNPJCadastradoResponse" />
+    </operation>
+    <operation name="setVisita">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setVisitaRequest" message="tns:setVisita" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setVisitaResponse" message="tns:setVisitaResponse" />
+    </operation>
+    <operation name="setDTUltimaSincronizacao">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setDTUltimaSincronizacaoRequest" message="tns:setDTUltimaSincronizacao" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setDTUltimaSincronizacaoResponse" message="tns:setDTUltimaSincronizacaoResponse" />
+    </operation>
+    <operation name="getDTUltimaSincronizacao">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getDTUltimaSincronizacaoRequest" message="tns:getDTUltimaSincronizacao" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getDTUltimaSincronizacaoResponse" message="tns:getDTUltimaSincronizacaoResponse" />
+    </operation>
+    <operation name="setCupomFiscal">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setCupomFiscalRequest" message="tns:setCupomFiscal" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setCupomFiscalResponse" message="tns:setCupomFiscalResponse" />
+    </operation>
+    <operation name="cancelaCupomFiscal">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/cancelaCupomFiscalRequest" message="tns:cancelaCupomFiscal" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/cancelaCupomFiscalResponse" message="tns:cancelaCupomFiscalResponse" />
+    </operation>
+    <operation name="setCupomFiscalImpresso">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setCupomFiscalImpressoRequest" message="tns:setCupomFiscalImpresso" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setCupomFiscalImpressoResponse" message="tns:setCupomFiscalImpressoResponse" />
+    </operation>
+    <operation name="setItemCupomFiscalImpresso">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setItemCupomFiscalImpressoRequest" message="tns:setItemCupomFiscalImpresso" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setItemCupomFiscalImpressoResponse" message="tns:setItemCupomFiscalImpressoResponse" />
+    </operation>
+    <operation name="getProdutoPesquisa">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getProdutoPesquisaRequest" message="tns:getProdutoPesquisa" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getProdutoPesquisaResponse" message="tns:getProdutoPesquisaResponse" />
+    </operation>
+    <operation name="getVisita">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getVisitaRequest" message="tns:getVisita" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getVisitaResponse" message="tns:getVisitaResponse" />
+    </operation>
+    <operation name="getRelatorioPedido">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getRelatorioPedidoRequest" message="tns:getRelatorioPedido" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getRelatorioPedidoResponse" message="tns:getRelatorioPedidoResponse" />
+    </operation>
+    <operation name="getRelatorioFaturamentoProdutoPorCategoria">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getRelatorioFaturamentoProdutoPorCategoriaRequest" message="tns:getRelatorioFaturamentoProdutoPorCategoria" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getRelatorioFaturamentoProdutoPorCategoriaResponse" message="tns:getRelatorioFaturamentoProdutoPorCategoriaResponse" />
+    </operation>
+    <operation name="getRelatorioContas">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/getRelatorioContasRequest" message="tns:getRelatorioContas" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/getRelatorioContasResponse" message="tns:getRelatorioContasResponse" />
+    </operation>
+    <operation name="setRota">
+      <input wsam:Action="http://webservice.myse.com.br/IntegraWS/setRotaRequest" message="tns:setRota" />
+      <output wsam:Action="http://webservice.myse.com.br/IntegraWS/setRotaResponse" message="tns:setRotaResponse" />
+    </operation>
+  </portType>
+  <binding name="IntegraWSPortBinding" type="tns:IntegraWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setProduto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deletaPrecoProduto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setEstoquePreco">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPromocao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setContas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setVendedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setCondicaoPagamento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setTabelaPreco">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setStatCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setStatClienteProduto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPreco">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPacoteNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="consultaProcessamentoNFePedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBoleto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getIDUltimoCupomFiscal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPacoteEstoque">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPreco">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProduto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProdutoNovo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setStatusPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPedidoSincronizado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setLevantamentoPedidoSincronizado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getLevantamentoEstoquePedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setMixCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCondicaoPagamento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRamoNegocio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRoteiro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRemessa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setLatitudeLongitudeVendedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCidade">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getFechamentos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCupomFiscalAguardandoImpressao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getItensPedidoAguardandoImpressao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getImpressoraTicket">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getImpressoraTicketETPImpressao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setOportunidade">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isCPF_CNPJCadastrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setVisita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setDTUltimaSincronizacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDTUltimaSincronizacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setCupomFiscal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cancelaCupomFiscal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setCupomFiscalImpresso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setItemCupomFiscalImpresso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProdutoPesquisa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVisita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRelatorioPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRelatorioFaturamentoProdutoPorCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRelatorioContas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setRota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IntegraWS">
+    <port name="IntegraWSPort" binding="tns:IntegraWSPortBinding">
+      <soap:address location="http://inet.integratornet.com.br:8080/1.5/IntegraWS" />
+    </port>
+  </service>
+</definitions>

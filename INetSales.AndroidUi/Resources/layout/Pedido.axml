@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Spinner
+            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_marginBottom="10dp"
+            android:prompt="@string/grupo_prompt"
+            android:id="@+id/snGrupo" />
+    </LinearLayout>
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="650dip"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lvProduto" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0">
+        <Button
+            android:id="@+id/btnOC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordem de compra" />
+        <Button
+            android:id="@+id/btnProdutosSelecionados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produtos" />
+        <Button
+            android:id="@+id/btnPagamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pagamento" />
+        <Button
+            android:id="@+id/btnFinalizarPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalizar" />
+    </LinearLayout>
+</LinearLayout>

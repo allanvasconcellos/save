@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+  <TextView android:id="@+id/tvClientePesquisa"
+            android:gravity="center"
+            android:textSize="16px"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+  
+  <INetSales.AndroidUi.Controls.TabPageIndicator
+      android:id="@+id/indicatorPesquisa"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+        />
+  <android.support.v4.view.ViewPager
+      android:id="@+id/pagerPesquisa"
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+        />
+
+  <LinearLayout android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+    <Button android:id="@+id/btnLimparPesquisa"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:textSize="14px"
+            android:text="Limpar">
+    </Button>
+    <Button android:id="@+id/btnFinalizarPesquisa"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:textSize="14px"
+            android:text="Finalizar">
+    </Button>
+  </LinearLayout>
+
+</LinearLayout>

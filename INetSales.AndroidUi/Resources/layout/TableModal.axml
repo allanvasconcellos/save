@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_gravity="center"
+  android:id="@+id/tlModal">
+
+  <TableRow
+        android:layout_marginTop="13dip"
+        android:padding="10dip"
+        android:id="@+id/trHeader"
+        >
+  </TableRow>
+
+  <View android:layout_height="2dip" android:background="#FF909090" android:id="@+id/lineQuantidade" />
+  
+</TableLayout>

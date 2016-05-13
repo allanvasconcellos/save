@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="1000dip"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:shrinkColumns="0"
+             android:stretchColumns="0"
+             android:id="@+id/tbValorTemplate">
+
+  <TableRow
+      android:layout_marginTop="50dip"
+        >
+    <TextView android:text="" />
+    <TextView android:text=""/>
+    <TextView android:text="" android:paddingLeft="15dip"/>
+    <TextView android:text="" android:paddingLeft="15dip"/>
+    <TextView android:text="Recebidos" android:paddingLeft="15dip"/>
+    <TextView android:text="" android:paddingLeft="15dip"/>
+    <TextView android:text="" android:paddingLeft="15dip"/>
+  </TableRow>
+
+  <TableRow
+      android:padding="10dip"
+      android:id="@+id/trQuantidadeValorHeader"
+        >
+    <TextView android:text="HALLS"
+              android:gravity="center_horizontal"
+              android:textStyle="bold"  />
+    <TextView android:text="Qtd. Recebida"/>
+    <TextView android:text="Qtd. Vendida" android:paddingLeft="15dip"/>
+    <TextView android:text="Saldo" android:paddingLeft="15dip"/>
+    <TextView android:text="Dinheiro" android:paddingLeft="15dip"/>
+    <TextView android:text="Cheque" android:paddingLeft="15dip"/>
+    <TextView android:text="Boleto" android:paddingLeft="15dip"/>
+  </TableRow>
+
+  <View android:layout_height="2dip" android:background="#FF909090" android:id="@+id/lineQuantidadeValor" />
+
+  <TableRow
+      android:padding="5dip"
+      android:id="@+id/trQuantidadeValorDetail">
+    <TextView android:text="Produto A"
+              android:layout_width="200dip"/>
+    <TextView android:text="10" android:gravity="center_horizontal" />
+    <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+    <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+    <TextView android:text="R$ 10,00" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+    <TextView android:text="R$ 1540,00" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+    <TextView android:text="R$ 300,00" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+  </TableRow>
+</TableLayout>

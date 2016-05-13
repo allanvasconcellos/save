@@ -1,0 +1,1 @@
+﻿ALTER TABLE TPedido ADD COLUMN OrdemCompra text;

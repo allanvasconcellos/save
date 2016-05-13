@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/layoutItemDadosVenda"
+              >
+
+  <!-- Dados quantidade -->
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <!-- Quantidade Recebida -->
+    <LinearLayout android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+      <ImageView android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_gravity="center"
+                 android:src="@drawable/entrada"/>
+      <TextView android:text="10"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvQuantidadeRecebida" />
+    </LinearLayout>
+
+    <!-- Quantidade vendida -->
+    <LinearLayout android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+      <ImageView android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_gravity="center"
+                 android:src="@drawable/saida"/>
+      <TextView android:text="10"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvQuantidadeVendida" />
+    </LinearLayout>
+
+    <!-- Quantidade Disponivel -->
+    <LinearLayout android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+      <ImageView android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_gravity="center"
+                 android:src="@drawable/disponivel"/>
+      <TextView android:text="10"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvQuantidadeDisponivel" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <!-- Dados valor -->
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="50dp">
+
+    <!-- Valor Dinheiro -->
+    <LinearLayout android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+      <ImageView android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_gravity="center"
+                 android:src="@drawable/dinheiro"/>
+      <TextView android:text="R$ 10,00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvValorTotalDinheiro" />
+    </LinearLayout>
+
+    <!-- Valor Cheque -->
+    <LinearLayout android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+      <ImageView android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_gravity="center"
+                 android:src="@drawable/cheque"/>
+      <TextView android:text="R$ 10,00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvValorTotalCheque" />
+    </LinearLayout>
+
+    <!-- Valor Boleto -->
+    <LinearLayout android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+      <ImageView android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_gravity="center"
+                 android:src="@drawable/boleto"/>
+      <TextView android:text="R$ 10,00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvValorTotalBoleto" />
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

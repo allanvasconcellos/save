@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86FF4D78-C146-4155-BE6E-BA32AF1C9301}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INetSales.Objects</RootNamespace>
+    <AssemblyName>INetSales.Objects</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TesteSync|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TesteSync\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sync|AnyCPU'">
+    <OutputPath>bin\Sync\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoBackground_NoForaDia|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\NoBackground_NoForaDia\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RunWithoutDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RunWithoutDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoDebug|AnyCPU'">
+    <OutputPath>bin\NoDebug\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CircularNode.cs" />
+    <Compile Include="DbInterfaces\IClienteDb.Offline.cs" />
+    <Compile Include="DbInterfaces\ICondicaoPagamentoDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IConfiguracaoDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IEstoqueDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IGrupoDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IIntegraDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IPedidoDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IPesquisaDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IPesquisaDb.Online.cs" />
+    <Compile Include="DbInterfaces\IProdutoDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IRamoDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IRamoDb.Online.cs" />
+    <Compile Include="DbInterfaces\IRotaDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IUsuarioDb.Offline.cs" />
+    <Compile Include="DbInterfaces\IClienteDb.Online.cs" />
+    <Compile Include="DbInterfaces\ICondicaoPagamentoDb.Online.cs" />
+    <Compile Include="DbInterfaces\IConfiguracaoDb.Online.cs" />
+    <Compile Include="DbInterfaces\IGrupoDb.Online.cs" />
+    <Compile Include="DbInterfaces\IPedidoDb.Online.cs" />
+    <Compile Include="DbInterfaces\IProdutoDb.Online.cs" />
+    <Compile Include="DbInterfaces\IRotaDb.Online.cs" />
+    <Compile Include="DbInterfaces\IPackageDb.Online.cs" />
+    <Compile Include="DbInterfaces\IUsuarioDb.Online.cs" />
+    <Compile Include="Dtos\BlocoStatusEnum.cs" />
+    <Compile Include="Dtos\ClienteDto.cs" />
+    <Compile Include="Dtos\CondicaoPagamentoDto.cs" />
+    <Compile Include="Dtos\ConfiguracaoDto.cs" />
+    <Compile Include="Dtos\EstoqueDto.cs" />
+    <Compile Include="Dtos\GrupoDto.cs" />
+    <Compile Include="Dtos\IntegraDto.cs" />
+    <Compile Include="Dtos\PagamentoDto.cs" />
+    <Compile Include="Dtos\PedidoDto.cs" />
+    <Compile Include="Dtos\ProdutoDto.cs" />
+    <Compile Include="Dtos\RamoDto.cs" />
+    <Compile Include="Dtos\RemessaDto.cs" />
+    <Compile Include="Dtos\RotaDto.cs" />
+    <Compile Include="Dtos\StatusEmissaoPedido.cs" />
+    <Compile Include="Dtos\TipoPedidoEnum.cs" />
+    <Compile Include="Dtos\TipoPessoaEnum.cs" />
+    <Compile Include="Dtos\UsuarioDto.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IDb.cs" />
+    <Compile Include="IDbSession.cs" />
+    <Compile Include="IUploader.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="IDto.cs" />
+    <Compile Include="OnlineException.cs" />
+    <Compile Include="Pasta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoPesquisaPergunta.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Dtos\PendenciaDto.cs" />
+    <Compile Include="DbInterfaces\IRelatorioDb.Online.cs" />
+    <Compile Include="Dtos\ProdutoSaldoDto.cs" />
+    <Compile Include="Dtos\ProdutoPedidoDto.cs" />
+    <Compile Include="Dtos\ProdutoHistoricoDto.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="Dtos\ClienteRotaDto.cs" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

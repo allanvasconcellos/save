@@ -1,0 +1,1 @@
+﻿ALTER TABLE TCliente ADD COLUMN PermiteBoleto boolean;

@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96C1D3A0-B29C-4DB1-A51E-500C37084DF6}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INetSales.AndroidUi</RootNamespace>
+    <AssemblyName>INetSales.AndroidUi</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resources.designer.cs</AndroidResgenFile>
+    <AndroidApplication>true</AndroidApplication>
+    <MandroidI18n />
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MonoDroidLinkMode>None</MonoDroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MonoDroidLinkMode>Full</MonoDroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TesteSync|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TesteSync\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sync|AnyCPU'">
+    <OutputPath>bin\Sync\</OutputPath>
+    <DefineConstants>SYNC</DefineConstants>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoBackground_NoForaDia|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\NoBackground_NoForaDia\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NB_NFD</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Optimize>false</Optimize>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <WarningLevel>4</WarningLevel>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RunWithoutDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RunWithoutDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoDebug|AnyCPU'">
+    <OutputPath>bin\NoDebug\</OutputPath>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\Cliente\ClienteDetailActivity.cs" />
+    <Compile Include="Activities\Cliente\ClienteDetailEnderecoActivity.cs" />
+    <Compile Include="Activities\Cliente\ClienteDetailGeralActivity.cs" />
+    <Compile Include="Activities\Cliente\ClienteListActivity.cs" />
+    <Compile Include="Activities\Main\MenuRoteiroFragment.00.cs" />
+    <Compile Include="Activities\Main\MenuRoteiroFragment.01.cs" />
+    <Compile Include="Activities\Main\MenuRoteiroFragment.cs" />
+    <Compile Include="Activities\Main\MenuRoteiroFragmentAdapter.cs" />
+    <Compile Include="Activities\Main\RoteiroActivity.cs" />
+    <Compile Include="Activities\Main\RoteiroActivity.Fragment.cs" />
+    <Compile Include="Activities\Main\RoteiroActivity.Menu.cs" />
+    <Compile Include="Activities\Pedido\ListaPedidoActivity.cs" />
+    <Compile Include="Activities\Pedido\PedidoFinalizadoActivity.cs" />
+    <Compile Include="Activities\Pedido\PedidoSelecionadoModalView.cs" />
+    <Compile Include="Activities\Pesquisa\PrecoPesquisaFragment.cs" />
+    <Compile Include="Activities\Pesquisa\PerguntasPesquisaFragment.cs" />
+    <Compile Include="Activities\Pesquisa\PesquisaActivity.cs" />
+    <Compile Include="Activities\Pesquisa\CategoriaPesquisaFragment.cs" />
+    <Compile Include="Activities\RelatorioForcaVendaActivity.cs" />
+    <Compile Include="BaseActivity.cs" />
+    <Compile Include="BaseTabActivity.cs" />
+    <Compile Include="Controls\AcessoModalView.cs" />
+    <Compile Include="Controls\BuildLayout.cs" />
+    <Compile Include="Controls\BuildList.cs" />
+    <Compile Include="Controls\BuildRelativeLayout.cs" />
+    <Compile Include="Controls\BuildTableLayout.cs" />
+    <Compile Include="Controls\CirclePageIndicator.cs" />
+    <Compile Include="Controls\ConsoleModalView.cs" />
+    <Compile Include="Controls\FragmentAdapter.cs" />
+    <Compile Include="Controls\MultipleActionModalView.cs" />
+    <Compile Include="Controls\ConfiguracaoModalView.cs" />
+    <Compile Include="Controls\ProgressModalView.cs" />
+    <Compile Include="Controls\TabPageIndicator.cs" />
+    <Compile Include="IMenuActivity.cs" />
+    <Compile Include="IPageIndicator.cs" />
+    <Compile Include="ITitleProvider.cs" />
+    <Compile Include="MonodroidApplication.cs" />
+    <Compile Include="ExecuteSyncReceiver.cs" />
+    <Compile Include="TesteApplication.cs" />
+    <Compile Include="TipoRelatorioEnum.cs" />
+    <Compile Include="Activities\RelatorioOptionActivity.cs" />
+    <Compile Include="Activities\RelatorioQuantidadeActivity.cs" />
+    <None Include="Activities\RelatorioQuantidadeValorActivity.cs.exclude" />
+    <Compile Include="Activities\Pedido\PedidoActivity.cs" />
+    <Compile Include="Activities\Pedido\PedidoPagamentoModalView.cs" />
+    <Compile Include="Activities\RelatorioSelectModalView.cs" />
+    <Compile Include="ActivityFlags.cs" />
+    <Compile Include="ActivityHelper.cs" />
+    <Compile Include="ActivityInfo.cs" />
+    <Compile Include="Controls\BuildControl.cs" />
+    <Compile Include="Controls\DtoAdapter.cs" />
+    <Compile Include="Controls\ListAdapter.cs" />
+    <Compile Include="Controls\NumericEditText.cs" />
+    <Compile Include="SyncService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resources.designer.cs" />
+    <Compile Include="SplashScreenActivity.cs" />
+    <AndroidResource Include="Resources\layout\ClienteList.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ClienteDetailGeral.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TipoPedidoSelecao.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PedidoSelecionado.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListModal.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TableModal.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AcertoSaldo.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\border.xml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Pesquisa.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\simple_spinner_item.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Configuracao.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MenuFragment_00.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MenuFragment_01.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PedidoList.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PedidoFinalizado.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RelatorioSinteticoForcaVenda.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ItemDadosVenda.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ClienteDetailEndereco.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <Compile Include="LinuxUtils.cs" />
+    <None Include="packages.config" />
+    <Compile Include="Activities\Pedido\PedidoOCModalView.cs" />
+    <AndroidResource Include="Resources\layout\PedidoOC.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <Compile Include="Activities\Cliente\ClienteDetailPendenciasActivity.cs" />
+    <AndroidResource Include="Resources\layout\ClienteDetailPendencia.axml" />
+    <AndroidResource Include="Resources\drawable\img_money.png" />
+    <Compile Include="Activities\Relatorio\RelatorioPedidoOrcamentoActivity.cs" />
+    <AndroidResource Include="Resources\layout\RelatorioPedidoOrcamento.axml" />
+    <Compile Include="Controls\FilterableAdapter.cs" />
+    <Compile Include="Controls\TextWatcher.cs" />
+    <Compile Include="Activities\Cliente\ClienteFilterableActivity.cs" />
+    <AndroidResource Include="Resources\layout\Print.axml" />
+    <Compile Include="Activities\PrintActivity.cs" />
+    <Compile Include="Helper\Wifi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\drawable-hdpi\app_sample_code.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\stat_sample.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\app_sample_code.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\stat_sample.png" />
+    <AndroidResource Include="Resources\values\arrays.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_applications.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_display.png" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\values\colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_tab_artists_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_tab_artists.xml" />
+    <AndroidResource Include="Resources\drawable\ic_tab_artists_grey.png" />
+    <AndroidResource Include="Resources\drawable\LogoInet.jpg" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\color\list_bg.xml" />
+    <AndroidResource Include="Resources\layout\vpi__tab.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\vpi__attrs.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\vpi__colors.xml" />
+    <AndroidResource Include="Resources\values\vpi__defaults.xml" />
+    <AndroidResource Include="Resources\values\vpi__styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\color\vpi__dark_theme.xml" />
+    <AndroidResource Include="Resources\color\vpi__light_theme.xml" />
+    <AndroidResource Include="Resources\drawable\custom_tab_indicator.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\vpi__tab_indicator.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_unselected.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_selected.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_unselected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_unselected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_selected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_selected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_unselected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_selected.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_selected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_unselected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vpi__tab_selected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vpi__tab_selected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vpi__tab_selected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vpi__tab_unselected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vpi__tab_unselected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vpi__tab_unselected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\vpi__tab_selected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\vpi__tab_selected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\vpi__tab_selected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\vpi__tab_unselected_focused_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\vpi__tab_unselected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\vpi__tab_unselected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\menu\MenuPedido.xml" />
+    <AndroidResource Include="Resources\drawable\img_cliente.png" />
+    <AndroidResource Include="Resources\drawable\img_financeiro.png" />
+    <AndroidResource Include="Resources\drawable\img_relatorio.png" />
+    <AndroidResource Include="Resources\drawable\img_configuracao.png" />
+    <AndroidResource Include="Resources\drawable\cliente_item_pendencia.png" />
+    <AndroidResource Include="Resources\drawable\cliente_item.png" />
+    <AndroidResource Include="Resources\drawable\cliente_item_pedido.png" />
+    <AndroidResource Include="Resources\drawable\img_remessa.png" />
+    <AndroidResource Include="Resources\drawable\img_sos.png" />
+    <AndroidResource Include="Resources\drawable\ok.png" />
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\excluir.png" />
+    <AndroidResource Include="Resources\drawable\seta_direita.png" />
+    <AndroidResource Include="Resources\drawable\seta_esquerda.png" />
+    <AndroidResource Include="Resources\drawable\img_logoff.png" />
+    <AndroidResource Include="Resources\drawable\img_carrinho.png" />
+    <AndroidResource Include="Resources\drawable\img_comunicacao.png" />
+    <AndroidResource Include="Resources\drawable\entrada.png" />
+    <AndroidResource Include="Resources\drawable\saida.png" />
+    <AndroidResource Include="Resources\drawable\disponivel.png" />
+    <AndroidResource Include="Resources\drawable\dinheiro.png" />
+    <AndroidResource Include="Resources\drawable\boleto.png" />
+    <AndroidResource Include="Resources\drawable\cheque.png" />
+    <AndroidResource Include="Resources\drawable\img_pesquisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Login.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\TabLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Roteiro.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\INetSales.Objects\INetSales.Objects.csproj">
+      <Project>{86FF4D78-C146-4155-BE6E-BA32AF1C9301}</Project>
+      <Name>INetSales.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INetSales.ViewController\INetSales.ViewController.csproj">
+      <Project>{1AE34EB0-02DB-4C72-BB51-44B84BC302A7}</Project>
+      <Name>INetSales.ViewController</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\PedidoPagamento.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SplashScreen.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\PedidoSelecaoItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Pedido.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ProdutoSelecionadoItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\TabFragment.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Relatorios.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\RelatorioQuantidadeTemplate.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Teste.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\RelatorioQuantidadeValorTemplate.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Activities\Relatorio\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Helper\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfviewer\compatibility.js" />
+    <AndroidAsset Include="Assets\pdfviewer\customview.js" />
+    <AndroidAsset Include="Assets\pdfviewer\data.json" />
+    <AndroidAsset Include="Assets\pdfviewer\index.html" />
+    <AndroidAsset Include="Assets\pdfviewer\minimal.css" />
+    <AndroidAsset Include="Assets\pdfviewer\pdf.js" />
+    <AndroidAsset Include="Assets\pdfviewer\pdf.worker.js" />
+    <AndroidAsset Include="Assets\pdfviewer\pdffile.js" />
+    <AndroidAsset Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+</Project>

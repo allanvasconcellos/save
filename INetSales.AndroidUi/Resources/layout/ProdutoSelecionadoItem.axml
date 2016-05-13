@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_marginTop="5dp"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+  <TextView
+      android:text="Produto"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="wrap_content"
+      android:layout_height="fill_parent"
+      android:id="@+id/tvProdutoNome" />
+  <TextView
+      android:text="Quantidade Pedida"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="wrap_content"
+      android:layout_height="fill_parent"
+      android:layout_marginLeft="15dp"
+      android:gravity="center_vertical"
+      android:id="@+id/tvQtdPedida" />
+  <TextView
+      android:text="Valor"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="wrap_content"
+      android:layout_height="fill_parent"
+      android:gravity="center_vertical"
+      android:id="@+id/tvValorPedido"
+      android:layout_marginLeft="15dp" />
+</LinearLayout>

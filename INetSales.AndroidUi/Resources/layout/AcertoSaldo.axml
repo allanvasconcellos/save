@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:layout_marginTop="50dip">
+
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="800dip"
+                android:paddingLeft="20dip">
+    
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+      <TextView android:text="Remessas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+      <CheckBox android:text="Todos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"/>
+      
+      <ListView
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:persistentDrawingCache="animation|scrolling"
+            android:id="@+id/lvRemessasAcerto" />
+      
+    </LinearLayout>
+
+    <!-- Tabelas template - visão grupo com seleção de remessas -->
+    <TableLayout android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="30dip"
+                 android:id="@+id/tbVisaoGrupo">
+      <TableRow
+          android:padding="10dip"
+          android:id="@+id/trQuantidadeHeader" >
+        <TextView android:text="HALLS"
+                  android:gravity="center_horizontal"
+                  android:textStyle="bold"  />
+        <TextView android:text="Recebido"/>
+        <TextView android:text="Vendido" android:paddingLeft="15dip"/>
+        <TextView android:text="Saldo" android:paddingLeft="15dip"/>
+      </TableRow>
+
+      <View android:layout_height="2dip" android:background="#FF909090" android:id="@+id/lineQuantidade" />
+
+      <TableRow
+          android:padding="5dip"
+          android:id="@+id/trQuantidadeDetail" >
+        <TextView android:text="Produto A"
+                  android:layout_width="100dip"/>
+        <TextView android:text="10" android:gravity="center_horizontal" />
+        <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+        <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+      </TableRow>
+
+      <TableRow
+          android:padding="10dip"
+          android:id="@+id/trQuantidadeHeader" >
+        <TextView android:text="HALLS"
+                  android:gravity="center_horizontal"
+                  android:textStyle="bold"  />
+        <TextView android:text="Recebido"/>
+        <TextView android:text="Vendido" android:paddingLeft="15dip"/>
+        <TextView android:text="Saldo" android:paddingLeft="15dip"/>
+      </TableRow>
+
+      <View android:layout_height="2dip" android:background="#FF909090" android:id="@+id/lineQuantidade" />
+
+      <TableRow
+          android:padding="5dip"
+          android:id="@+id/trQuantidadeDetail" >
+        <TextView android:text="Produto A"
+                  android:layout_width="100dip"/>
+        <TextView android:text="10" android:gravity="center_horizontal" />
+        <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+        <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+      </TableRow>
+
+      <TableRow
+          android:padding="10dip"
+          android:id="@+id/trQuantidadeHeader" >
+        <TextView android:text="HALLS"
+                  android:gravity="center_horizontal"
+                  android:textStyle="bold"  />
+        <TextView android:text="Recebido"/>
+        <TextView android:text="Vendido" android:paddingLeft="15dip"/>
+        <TextView android:text="Saldo" android:paddingLeft="15dip"/>
+      </TableRow>
+
+      <View android:layout_height="2dip" android:background="#FF909090" android:id="@+id/lineQuantidade" />
+
+      <TableRow
+          android:padding="5dip"
+          android:id="@+id/trQuantidadeDetail" >
+        <TextView android:text="Produto A"
+                  android:layout_width="100dip"/>
+        <TextView android:text="10" android:gravity="center_horizontal" />
+        <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+        <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+      </TableRow>
+    </TableLayout>
+
+  </LinearLayout>
+
+  <LinearLayout android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dip" >
+    <Button
+      android:text="Limpar"
+      android:layout_width="100dip"
+      android:layout_height="wrap_content"/>
+    <Button
+      android:text="Finalizar Acerto"
+      android:layout_width="100dip"
+      android:layout_height="wrap_content"/>
+  </LinearLayout>
+
+</LinearLayout>

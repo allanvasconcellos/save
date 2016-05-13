@@ -1,0 +1,1 @@
+﻿ALTER TABLE TUsuario ADD COLUMN IsSyncPending boolean DEFAULT true;

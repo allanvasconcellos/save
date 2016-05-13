@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:layout_width="fill_parent"
+    p1:layout_height="wrap_content"
+    p1:padding="20dp">
+    <TextView
+        p1:id="@+id/tvTitulo"
+        p1:text="Relatório"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:layout_gravity="center"
+        p1:paddingBottom="@dimen/default_title_indicator_text_size"
+        p1:textSize="@dimen/default_title_indicator_text_size"
+        p1:textStyle="bold"
+        p1:textAlignment="center" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:layout_width="fill_parent"
+        p1:layout_height="fill_parent">
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:layout_width="297.8dp"
+            p1:layout_height="fill_parent">
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:layout_width="wrap_content"
+                p1:layout_height="fill_parent">
+                <Button
+                    p1:id="@+id/btnRelPedInicio"
+                    p1:text="Inicio"
+                    p1:layout_width="fill_parent"
+                    p1:layout_height="wrap_content" />
+                <EditText
+                    p1:id="@+id/txtRelPedOrcDataInicio"
+                    p1:inputType="date"
+                    p1:layout_width="201.3dp"
+                    p1:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:layout_width="fill_parent"
+            p1:layout_height="fill_parent">
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:layout_width="wrap_content"
+                p1:layout_height="fill_parent">
+                <Button
+                    p1:id="@+id/btnRelPedFim"
+                    p1:text="Fim"
+                    p1:layout_width="fill_parent"
+                    p1:layout_height="wrap_content" />
+                <EditText
+                    p1:id="@+id/txtRelPedOrcDataFim"
+                    p1:layout_width="201.3dp"
+                    p1:inputType="date"
+                    p1:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        p1:id="@+id/btnRelPedOrcGerar"
+        p1:text="Gerar relatorio"
+        p1:layout_width="fill_parent"
+        p1:layout_height="wrap_content" />
+</LinearLayout>

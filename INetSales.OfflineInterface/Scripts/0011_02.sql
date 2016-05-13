@@ -1,0 +1,1 @@
+﻿UPDATE TConfiguracao SET UrlWebService = 'http://inet.integratornet.com.br:8080/integratornet2/IntegraWS?wsdl';

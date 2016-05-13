@@ -1,0 +1,1 @@
+﻿ALTER TABLE TConfiguracao ADD COLUMN CnpjEmpresa text;

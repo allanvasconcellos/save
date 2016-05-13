@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AE34EB0-02DB-4C72-BB51-44B84BC302A7}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INetSales.ViewController</RootNamespace>
+    <AssemblyName>INetSales.ViewController</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TesteSync|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TesteSync\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SYNC</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sync|AnyCPU'">
+    <OutputPath>bin\Sync\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SYNC</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoBackground_NoForaDia|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\NoBackground_NoForaDia\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NB_NFD</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RunWithoutDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RunWithoutDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoDebug|AnyCPU'">
+    <OutputPath>bin\NoDebug\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationController.cs" />
+    <Compile Include="BaseController.cs" />
+    <Compile Include="Controllers\AcertoSaldoController.cs" />
+    <Compile Include="Controllers\ConfiguracaoController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\PedidoController.Finalizar.cs" />
+    <Compile Include="Controllers\PedidoController.Pagamento.cs" />
+    <Compile Include="Controllers\PedidoController.Remessa.cs" />
+    <Compile Include="Controllers\PedidoProcessadoController.cs" />
+    <Compile Include="Controllers\FirstController.cs" />
+    <Compile Include="Controllers\PesquisaController.cs" />
+    <Compile Include="Controllers\RelatorioController.cs" />
+    <Compile Include="Controllers\RoteiroController.Menu.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="IConsoleView.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="Lib\DbHelper.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RoteiroController.cs" />
+    <Compile Include="ExceptionPolicy.cs" />
+    <Compile Include="IProgressView.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="LogConsoleSaver.cs" />
+    <Compile Include="Models\GrupoInfoModel.cs" />
+    <Compile Include="Models\ProdutoInfoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="StatusDetailsView.cs" />
+    <Compile Include="Lib\ProgressCompleteManager.cs" />
+    <Compile Include="Sync\Integrator.cs" />
+    <Compile Include="Sync\Integrator.Sync.cs" />
+    <Compile Include="Sync\Integrator.Upload.cs" />
+    <Compile Include="Sync\IntegratorManager.cs" />
+    <Compile Include="Sync\Integrators\ClienteSync.cs" />
+    <Compile Include="Sync\Integrators\ClienteUpload.cs" />
+    <Compile Include="Sync\Integrators\CondicaoPagamentoSync.cs" />
+    <Compile Include="Sync\Integrators\ConfiguracaoSync.cs" />
+    <Compile Include="Sync\Integrators\GrupoSync.cs" />
+    <Compile Include="Sync\Integrators\PedidoUpload.cs" />
+    <Compile Include="Sync\Integrators\PesquisaSync.cs" />
+    <Compile Include="Sync\Integrators\ProdutoSync.cs" />
+    <Compile Include="Sync\Integrators\RamoSync.cs" />
+    <Compile Include="Sync\Integrators\RotaSync.cs" />
+    <Compile Include="Sync\Integrators\UsuarioSync.cs" />
+    <Compile Include="Views\IAcertoSaldoView.cs" />
+    <Compile Include="Views\IAcessoChildView.cs" />
+    <Compile Include="Views\IClienteView.cs" />
+    <Compile Include="Views\IConfiguracaoChildView.cs" />
+    <Compile Include="Views\IConfiguracaoView.cs" />
+    <Compile Include="Views\IFirstView.cs" />
+    <Compile Include="Views\IPedidoClienteNovoView.cs" />
+    <Compile Include="Views\IPedidoListaView.cs" />
+    <Compile Include="Views\IPagamentoChildView.cs" />
+    <Compile Include="Views\IPedidoFinalizadoView.cs" />
+    <Compile Include="Views\IPedidoProcessadoView.cs" />
+    <Compile Include="Views\IPedidoView.cs" />
+    <Compile Include="Views\IPesquisaView.cs" />
+    <Compile Include="Views\IRelatorioForcaVendaView.cs" />
+    <Compile Include="Views\IRelatorioView.cs" />
+    <Compile Include="Views\IRemessaView.cs" />
+    <Compile Include="Views\IRoteiroView.cs" />
+    <Compile Include="Controllers\RelatorioController.PedidoOrcamento.cs" />
+    <Compile Include="Views\IRelatorioPedidoOrcamentoView.cs" />
+    <Compile Include="Controllers\RelatorioController.FaturamentoCategoria.cs" />
+    <Compile Include="Controllers\RelatorioController.ClienteDevedores.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\INetSales.Objects\INetSales.Objects.csproj">
+      <Project>{86FF4D78-C146-4155-BE6E-BA32AF1C9301}</Project>
+      <Name>INetSales.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INetSales.OnlineInterface\INetSales.OnlineInterface.csproj">
+      <Project>{E7D25A29-DE51-4A3A-BAD3-714E76206F7A}</Project>
+      <Name>INetSales.OnlineInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Save.LocalData\Save.LocalData.csproj">
+      <Project>{15D6A25A-F8AD-4ED4-B713-6CB0F92F680C}</Project>
+      <Name>Save.LocalData</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

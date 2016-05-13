@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+
+  <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+    <!-- Input de pagamentos -->
+    <TableLayout android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:paddingLeft="150dip">
+      <!--Dinheiro-->
+      <TableRow android:padding="5dip">
+        <TextView
+          android:text="Dinheiro: "
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="left" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:width="100dip" />
+      </TableRow>
+
+      <!--Cheque-->
+      <TableRow android:padding="5dip">
+        <TextView
+          android:text="Cheque: "
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="left" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:width="100dip" />
+
+        <Button
+            android:text="Info. Cheque"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" />
+
+      </TableRow>
+
+      <!--Boleto-->
+      <TableRow android:padding="5dip">
+        <TextView
+          android:text="Boleto: "
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="left" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:width="100dip" />
+      </TableRow>
+    </TableLayout>
+
+    <!-- Informações de valores -->
+    <TableLayout android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:paddingLeft="250dip">
+      <TableRow android:padding="5dip">
+        <TextView
+            android:text="Total Valor Solicitado:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="R$ 100,00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dip"
+            android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dip">
+        <TextView
+            android:text="Total Valor Recebido:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="R$ 90,00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dip"
+            android:layout_height="wrap_content" />
+      </TableRow>
+      <TableRow android:padding="5dip">
+        <TextView
+            android:text="Diferença:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="R$ 10,00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dip"
+            android:layout_height="wrap_content" />
+      </TableRow>
+    </TableLayout>
+
+  </LinearLayout>
+
+  <TextView
+      android:text="Produtos Selecionados"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:gravity="center" />
+  <ListView
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" />
+
+
+</LinearLayout>

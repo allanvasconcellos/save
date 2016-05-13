@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:gravity="center"
+    p1:orientation="horizontal"
+    p1:layout_width="fill_parent"
+    p1:layout_height="wrap_content">
+<!-- Clientes -->
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:paddingRight="20dip">
+        <ImageButton
+            p1:id="@+id/btCliente"
+            p1:layout_width="75px"
+            p1:layout_height="75px"
+            p1:src="@drawable/img_cliente" />
+        <TextView
+            p1:text="Cliente"
+            p1:layout_width="fill_parent"
+            p1:layout_height="fill_parent"
+            p1:gravity="center"
+            p1:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+<!-- Pedidos Nota Fiscal -->
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:paddingRight="20dip">
+        <ImageButton
+            p1:id="@+id/btPedidos"
+            p1:layout_width="75px"
+            p1:layout_height="75px"
+            p1:src="@drawable/img_carrinho" />
+        <TextView
+            p1:text="Pedidos"
+            p1:layout_width="fill_parent"
+            p1:layout_height="fill_parent"
+            p1:gravity="center"
+            p1:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+<!-- Remessa -->
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:gravity="center"
+        p1:paddingRight="20dip">
+        <ImageButton
+            p1:id="@+id/btRemessa"
+            p1:layout_width="75px"
+            p1:layout_height="75px"
+            p1:src="@drawable/img_remessa" />
+        <TextView
+            p1:text="Remessa"
+            p1:layout_width="wrap_content"
+            p1:layout_height="fill_parent"
+            p1:gravity="center"
+            p1:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+<!-- SOS -->
+<!--    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:gravity="center"
+        p1:paddingRight="20dip">
+        <ImageButton
+            p1:id="@+id/btTestePrint"
+            p1:layout_width="75px"
+            p1:layout_height="75px"
+            p1:src="@drawable/img_sos" />
+        <TextView
+            p1:text="Teste Print"
+            p1:layout_width="wrap_content"
+            p1:layout_height="fill_parent"
+            p1:gravity="center"
+            p1:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>-->
+<!-- Logoff -->
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:gravity="center"
+        p1:paddingRight="20dip">
+        <ImageButton
+            p1:id="@+id/btLogoff"
+            p1:layout_width="75px"
+            p1:layout_height="75px"
+            p1:src="@drawable/img_logoff" />
+        <TextView
+            p1:text="Sair"
+            p1:layout_width="wrap_content"
+            p1:layout_height="fill_parent"
+            p1:gravity="center"
+            p1:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+</LinearLayout>

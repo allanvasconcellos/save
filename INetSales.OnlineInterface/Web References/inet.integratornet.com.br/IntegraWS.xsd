@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservice.myse.com.br/" targetNamespace="http://webservice.myse.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+  <xs:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+  <xs:element name="cancelaCupomFiscal" type="tns:cancelaCupomFiscal" />
+  <xs:element name="cancelaCupomFiscalResponse" type="tns:cancelaCupomFiscalResponse" />
+  <xs:element name="consultaProcessamentoNFePedido" type="tns:consultaProcessamentoNFePedido" />
+  <xs:element name="consultaProcessamentoNFePedidoResponse" type="tns:consultaProcessamentoNFePedidoResponse" />
+  <xs:element name="deletaPrecoProduto" type="tns:deletaPrecoProduto" />
+  <xs:element name="deletaPrecoProdutoResponse" type="tns:deletaPrecoProdutoResponse" />
+  <xs:element name="getBoleto" type="tns:getBoleto" />
+  <xs:element name="getBoletoResponse" type="tns:getBoletoResponse" />
+  <xs:element name="getCategoria" type="tns:getCategoria" />
+  <xs:element name="getCategoriaResponse" type="tns:getCategoriaResponse" />
+  <xs:element name="getCidade" type="tns:getCidade" />
+  <xs:element name="getCidadeResponse" type="tns:getCidadeResponse" />
+  <xs:element name="getCliente" type="tns:getCliente" />
+  <xs:element name="getClienteResponse" type="tns:getClienteResponse" />
+  <xs:element name="getCondicaoPagamento" type="tns:getCondicaoPagamento" />
+  <xs:element name="getCondicaoPagamentoResponse" type="tns:getCondicaoPagamentoResponse" />
+  <xs:element name="getCupomFiscalAguardandoImpressao" type="tns:getCupomFiscalAguardandoImpressao" />
+  <xs:element name="getCupomFiscalAguardandoImpressaoResponse" type="tns:getCupomFiscalAguardandoImpressaoResponse" />
+  <xs:element name="getDTUltimaSincronizacao" type="tns:getDTUltimaSincronizacao" />
+  <xs:element name="getDTUltimaSincronizacaoResponse" type="tns:getDTUltimaSincronizacaoResponse" />
+  <xs:element name="getFechamentos" type="tns:getFechamentos" />
+  <xs:element name="getFechamentosResponse" type="tns:getFechamentosResponse" />
+  <xs:element name="getIDUltimoCupomFiscal" type="tns:getIDUltimoCupomFiscal" />
+  <xs:element name="getIDUltimoCupomFiscalResponse" type="tns:getIDUltimoCupomFiscalResponse" />
+  <xs:element name="getImpressoraTicket" type="tns:getImpressoraTicket" />
+  <xs:element name="getImpressoraTicketETPImpressao" type="tns:getImpressoraTicketETPImpressao" />
+  <xs:element name="getImpressoraTicketETPImpressaoResponse" type="tns:getImpressoraTicketETPImpressaoResponse" />
+  <xs:element name="getImpressoraTicketResponse" type="tns:getImpressoraTicketResponse" />
+  <xs:element name="getItensPedidoAguardandoImpressao" type="tns:getItensPedidoAguardandoImpressao" />
+  <xs:element name="getItensPedidoAguardandoImpressaoResponse" type="tns:getItensPedidoAguardandoImpressaoResponse" />
+  <xs:element name="getLevantamentoEstoquePedido" type="tns:getLevantamentoEstoquePedido" />
+  <xs:element name="getLevantamentoEstoquePedidoResponse" type="tns:getLevantamentoEstoquePedidoResponse" />
+  <xs:element name="getPacoteEstoque" type="tns:getPacoteEstoque" />
+  <xs:element name="getPacoteEstoqueResponse" type="tns:getPacoteEstoqueResponse" />
+  <xs:element name="getPedido" type="tns:getPedido" />
+  <xs:element name="getPedidoResponse" type="tns:getPedidoResponse" />
+  <xs:element name="getPreco" type="tns:getPreco" />
+  <xs:element name="getPrecoResponse" type="tns:getPrecoResponse" />
+  <xs:element name="getProduto" type="tns:getProduto" />
+  <xs:element name="getProdutoNovo" type="tns:getProdutoNovo" />
+  <xs:element name="getProdutoNovoResponse" type="tns:getProdutoNovoResponse" />
+  <xs:element name="getProdutoPesquisa" type="tns:getProdutoPesquisa" />
+  <xs:element name="getProdutoPesquisaResponse" type="tns:getProdutoPesquisaResponse" />
+  <xs:element name="getProdutoResponse" type="tns:getProdutoResponse" />
+  <xs:element name="getRamoNegocio" type="tns:getRamoNegocio" />
+  <xs:element name="getRamoNegocioResponse" type="tns:getRamoNegocioResponse" />
+  <xs:element name="getRelatorioContas" type="tns:getRelatorioContas" />
+  <xs:element name="getRelatorioContasResponse" type="tns:getRelatorioContasResponse" />
+  <xs:element name="getRelatorioFaturamentoProdutoPorCategoria" type="tns:getRelatorioFaturamentoProdutoPorCategoria" />
+  <xs:element name="getRelatorioFaturamentoProdutoPorCategoriaResponse" type="tns:getRelatorioFaturamentoProdutoPorCategoriaResponse" />
+  <xs:element name="getRelatorioPedido" type="tns:getRelatorioPedido" />
+  <xs:element name="getRelatorioPedidoResponse" type="tns:getRelatorioPedidoResponse" />
+  <xs:element name="getRemessa" type="tns:getRemessa" />
+  <xs:element name="getRemessaResponse" type="tns:getRemessaResponse" />
+  <xs:element name="getRoteiro" type="tns:getRoteiro" />
+  <xs:element name="getRoteiroResponse" type="tns:getRoteiroResponse" />
+  <xs:element name="getUsuario" type="tns:getUsuario" />
+  <xs:element name="getUsuarioResponse" type="tns:getUsuarioResponse" />
+  <xs:element name="getVisita" type="tns:getVisita" />
+  <xs:element name="getVisitaResponse" type="tns:getVisitaResponse" />
+  <xs:element name="isCPF_CNPJCadastrado" type="tns:isCPF_CNPJCadastrado" />
+  <xs:element name="isCPF_CNPJCadastradoResponse" type="tns:isCPF_CNPJCadastradoResponse" />
+  <xs:element name="login" type="tns:login" />
+  <xs:element name="loginResponse" type="tns:loginResponse" />
+  <xs:element name="setCategoria" type="tns:setCategoria" />
+  <xs:element name="setCategoriaResponse" type="tns:setCategoriaResponse" />
+  <xs:element name="setCliente" type="tns:setCliente" />
+  <xs:element name="setClienteResponse" type="tns:setClienteResponse" />
+  <xs:element name="setCondicaoPagamento" type="tns:setCondicaoPagamento" />
+  <xs:element name="setCondicaoPagamentoResponse" type="tns:setCondicaoPagamentoResponse" />
+  <xs:element name="setContas" type="tns:setContas" />
+  <xs:element name="setContasResponse" type="tns:setContasResponse" />
+  <xs:element name="setCupomFiscal" type="tns:setCupomFiscal" />
+  <xs:element name="setCupomFiscalImpresso" type="tns:setCupomFiscalImpresso" />
+  <xs:element name="setCupomFiscalImpressoResponse" type="tns:setCupomFiscalImpressoResponse" />
+  <xs:element name="setCupomFiscalResponse" type="tns:setCupomFiscalResponse" />
+  <xs:element name="setDTUltimaSincronizacao" type="tns:setDTUltimaSincronizacao" />
+  <xs:element name="setDTUltimaSincronizacaoResponse" type="tns:setDTUltimaSincronizacaoResponse" />
+  <xs:element name="setEstoquePreco" type="tns:setEstoquePreco" />
+  <xs:element name="setEstoquePrecoResponse" type="tns:setEstoquePrecoResponse" />
+  <xs:element name="setItemCupomFiscalImpresso" type="tns:setItemCupomFiscalImpresso" />
+  <xs:element name="setItemCupomFiscalImpressoResponse" type="tns:setItemCupomFiscalImpressoResponse" />
+  <xs:element name="setLatitudeLongitudeVendedor" type="tns:setLatitudeLongitudeVendedor" />
+  <xs:element name="setLatitudeLongitudeVendedorResponse" type="tns:setLatitudeLongitudeVendedorResponse" />
+  <xs:element name="setLevantamentoPedidoSincronizado" type="tns:setLevantamentoPedidoSincronizado" />
+  <xs:element name="setLevantamentoPedidoSincronizadoResponse" type="tns:setLevantamentoPedidoSincronizadoResponse" />
+  <xs:element name="setMixCliente" type="tns:setMixCliente" />
+  <xs:element name="setMixClienteResponse" type="tns:setMixClienteResponse" />
+  <xs:element name="setOportunidade" type="tns:setOportunidade" />
+  <xs:element name="setOportunidadeResponse" type="tns:setOportunidadeResponse" />
+  <xs:element name="setPacoteNota" type="tns:setPacoteNota" />
+  <xs:element name="setPacoteNotaResponse" type="tns:setPacoteNotaResponse" />
+  <xs:element name="setPedido" type="tns:setPedido" />
+  <xs:element name="setPedidoResponse" type="tns:setPedidoResponse" />
+  <xs:element name="setPedidoSincronizado" type="tns:setPedidoSincronizado" />
+  <xs:element name="setPedidoSincronizadoResponse" type="tns:setPedidoSincronizadoResponse" />
+  <xs:element name="setPreco" type="tns:setPreco" />
+  <xs:element name="setPrecoResponse" type="tns:setPrecoResponse" />
+  <xs:element name="setProduto" type="tns:setProduto" />
+  <xs:element name="setProdutoResponse" type="tns:setProdutoResponse" />
+  <xs:element name="setPromocao" type="tns:setPromocao" />
+  <xs:element name="setPromocaoResponse" type="tns:setPromocaoResponse" />
+  <xs:element name="setRota" type="tns:setRota" />
+  <xs:element name="setRotaResponse" type="tns:setRotaResponse" />
+  <xs:element name="setStatCliente" type="tns:setStatCliente" />
+  <xs:element name="setStatClienteProduto" type="tns:setStatClienteProduto" />
+  <xs:element name="setStatClienteProdutoResponse" type="tns:setStatClienteProdutoResponse" />
+  <xs:element name="setStatClienteResponse" type="tns:setStatClienteResponse" />
+  <xs:element name="setStatusPedido" type="tns:setStatusPedido" />
+  <xs:element name="setStatusPedidoResponse" type="tns:setStatusPedidoResponse" />
+  <xs:element name="setTabelaPreco" type="tns:setTabelaPreco" />
+  <xs:element name="setTabelaPrecoResponse" type="tns:setTabelaPrecoResponse" />
+  <xs:element name="setVendedor" type="tns:setVendedor" />
+  <xs:element name="setVendedorResponse" type="tns:setVendedorResponse" />
+  <xs:element name="setVisita" type="tns:setVisita" />
+  <xs:element name="setVisitaResponse" type="tns:setVisitaResponse" />
+  <xs:complexType name="setCupomFiscalImpresso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCupomfiscal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCupomFiscalImpressoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPromocao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPromocaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaProcessamentoNFePedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaProcessamentoNFePedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getItensPedidoAguardandoImpressao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getItensPedidoAguardandoImpressaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setVisita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setVisitaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPacoteNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPacoteNotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletaPrecoProduto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletaPrecoProdutoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatClienteProduto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatClienteProdutoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setLevantamentoPedidoSincronizado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setLevantamentoPedidoSincronizadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProduto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdutoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setContas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setContasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCondicaoPagamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCondicaoPagamentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEstoquePreco">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEstoquePrecoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isCPF_CNPJCadastrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isCPF_CNPJCadastradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setOportunidade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlOportunidade" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setOportunidadeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVisita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVisitaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setMixCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setMixClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRelatorioPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRelatorioPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBoleto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBoletoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPreco">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPrecoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLevantamentoEstoquePedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLevantamentoEstoquePedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setTabelaPreco">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setTabelaPrecoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRelatorioContas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRelatorioContasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdutoNovo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdutoNovoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCategoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCategoriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setVendedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setVendedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setLatitudeLongitudeVendedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setLatitudeLongitudeVendedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdutoPesquisa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdutoPesquisaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setItemCupomFiscalImpresso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCupomfiscal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setItemCupomFiscalImpressoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCidade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCidadeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setProduto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setProdutoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPacoteEstoque">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPacoteEstoqueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRamoNegocio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRamoNegocioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRelatorioFaturamentoProdutoPorCategoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRelatorioFaturamentoProdutoPorCategoriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFechamentos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFechamentosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRemessa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRemessaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getImpressoraTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getImpressoraTicketResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPedidoSincronizado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPedidoSincronizadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRoteiro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRoteiroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCupomFiscal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCancelamentoCupomfiscal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCupomFiscalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatusPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlPedido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatusPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDTUltimaSincronizacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDTUltimaSincronizacaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCategoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCategoriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCondicaoPagamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCondicaoPagamentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDTUltimaSincronizacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDTUltimaSincronizacaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPreco">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlProduto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPrecoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCupomFiscal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlCupomfiscal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCupomFiscalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIDUltimoCupomFiscal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xml" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIDUltimoCupomFiscalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCupomFiscalAguardandoImpressao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCupomFiscalAguardandoImpressaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getImpressoraTicketETPImpressao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getImpressoraTicketETPImpressaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

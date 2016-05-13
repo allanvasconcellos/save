@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Pedido Finalizado"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="15.0dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/tvResultadoPedido" />
+    <TextView
+        android:text="Número"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/tvNumeroPedido" />
+    <TextView
+        android:text="OC"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/tvOC" />
+    <TextView
+        android:text="Quantidade Pedido"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/tvQuantidadePedidoFinalizado" />
+    <TextView
+        android:text="Total Valor"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/tvTotalValorFinalizado" />
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="680dip"
+        android:layout_marginTop="25dp"
+        android:id="@+id/lvProdutosPedido" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Reenviar pedido"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnUploadPedido" />
+            <Button
+                android:text="Nota Fiscal"
+                android:layout_width="100px"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNotaFiscal" />
+            <Button
+                android:text="Boleto"
+                android:layout_width="100px"
+                android:layout_marginLeft="10.0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnBoleto" />
+            <Button
+                android:text="Fechar"
+                android:layout_width="100px"
+                android:layout_marginLeft="10.0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnFecharPedidoFinalizado" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

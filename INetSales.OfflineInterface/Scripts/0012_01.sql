@@ -1,0 +1,1 @@
+﻿ALTER TABLE TPrecoPesquisa ADD COLUMN IsAtivo boolean;

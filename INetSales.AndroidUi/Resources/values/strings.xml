@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="alert_dialog_cancel">Cancelar</string>
+  <string name="alert_dialog_ok">Ok</string>
+  <string name="alert_dialog_yes">Sim</string>
+  <string name="alert_dialog_no">Não</string>
+  <string name="grupo_prompt">Grupo</string>
+  <string name="tipo_pagamento_prompt">Tipo de Pagamento</string>
+  <string name="dia_boleto_prompt">Dia do boleto</string>
+  <string name="relatorio_pedido_orcamento">Relatório de pedidos e orçamento</string>
+  <string name="relatorio_faturamento_categorio_produto">Relatório de faturamento por categoria de produto</string>
+  <string name="relatorio_cliente_devedores">Relatório de clientes devedores</string>
+  <string name="relatorio_saldo_estoque">Saldo de estoque</string>
+  <string name="comunicao_expirou">A comunicação expirou, tente reenviar o pedido mais tarde</string>
+
+  <string-array name="tipo_pagamento_array">
+    <item>Dinheiro</item>
+    <item>Cheque</item>
+    <item>Boleto</item>
+  </string-array>
+</resources>

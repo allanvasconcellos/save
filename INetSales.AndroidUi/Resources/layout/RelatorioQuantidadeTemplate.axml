@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TableLayout android:layout_width="600dip"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:shrinkColumns="0"
+               android:stretchColumns="0"
+               android:id="@+id/tbTemplate">
+
+    <TableRow
+        android:layout_marginTop="13dip"
+        android:padding="10dip"
+        android:id="@+id/trQuantidadeHeader"
+        >
+      <TextView android:text="HALLS" 
+                android:gravity="center_horizontal" 
+                android:textStyle="bold"  />
+      <TextView android:text="Qtd. Recebida"/>
+      <TextView android:text="Qtd. Vendida" android:paddingLeft="15dip"/>
+      <TextView android:text="Saldo" android:paddingLeft="15dip"/>
+    </TableRow>
+
+    <View android:layout_height="2dip" android:background="#FF909090" android:id="@+id/lineQuantidade" />
+
+    <TableRow
+        android:padding="5dip"
+        android:id="@+id/trQuantidadeDetail">
+      <TextView android:text="Produto A"
+                android:layout_width="200dip"/>
+      <TextView android:text="10" android:gravity="center_horizontal" />
+      <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+      <TextView android:text="10" android:gravity="center_horizontal" android:paddingLeft="15dip" />
+    </TableRow>
+  </TableLayout>
+</LinearLayout>

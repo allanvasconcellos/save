@@ -1,0 +1,175 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Util;
+using Android.Views;
+using Android.Widget;
+using INetSales.AndroidUi.Activities.Fragments;
+using INetSales.Business;
+using INetSales.Dto;
+using INetSales.ViewController.Blls;
+
+namespace INetSales.AndroidUi.Activities
+{
+    [Activity(Label = "SAVE - SISTEMA DE AUTOMAÇÃO DE VENDAS", Theme = "@style/INetTheme")]
+    [IntentFilter(new[] { Intent.ActionMain }, Categories = new[] { ActivityFlags.RelQtdValorCategory })]
+    //[Activity(Label = "SAVE - SISTEMA DE AUTOMAÇÃO DE VENDAS", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/INetTheme", NoHistory = true)]
+    public class RelatorioQuantidadeValorActivity : Activity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            // Construir layout
+            var tipoRelatorio = Intent.GetExtra<RelatorioOptionFragment.TipoRelatorio>(ActivityFlags.TipoRelatorioParam);
+            switch (tipoRelatorio)
+            {
+                case RelatorioOptionFragment.TipoRelatorio.Analitico:
+                    GerarRelatorioAnalitico();
+                    break;
+                case RelatorioOptionFragment.TipoRelatorio.Sintetico:
+                    GerarRelatorioSintetico();
+                    break;
+                default:
+                    throw new InvalidOperationException();
+            }
+
+            this.InitializeActivity();
+        }
+
+        private void GerarRelatorioAnalitico()
+        {
+            var view = LayoutInflater.Inflate(Resource.Layout.RelatorioQuantidadeValorTemplate, null);
+            var bll = new RelatorioBusiness();
+            var table = view.FindViewById<TableLayout>(Resource.Id.tbValorTemplate);
+
+            try
+            {
+                for (int i = 1; i < table.ChildCount; i++)
+                {
+                    table.GetChildAt(i).Visibility = ViewStates.Invisible;
+                }
+
+                foreach (var grupoInfo in bll.GerarRelatorioQuantidadeAnalitico(Session.UsuarioLogado))
+                {
+                    table.AddView(GetHeader(grupoInfo.Nome), table.ChildCount);
+                    table.AddView(GetLineSeparator(), table.ChildCount);
+                    foreach (var produtoInfo in grupoInfo.Produtos)
+                    {
+                        table.AddView(GetProdutoDetail(produtoInfo), table.ChildCount);
+                    }
+                    table.AddView(GetLineSeparator(), table.ChildCount);
+                }
+                SetContentView(view);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("RelatorioQuantidadeValorActivity.GerarRelatorioAnalitico", ex.Message);
+            }
+        }
+
+        private void GerarRelatorioSintetico()
+        {
+            var view = LayoutInflater.Inflate(Resource.Layout.RelatorioQuantidadeValorTemplate, null);
+            var bll = new RelatorioBusiness();
+            var table = view.FindViewById<TableLayout>(Resource.Id.tbValorTemplate);
+
+            try
+            {
+                for (int i = 1; i < table.ChildCount; i++)
+                {
+                    table.GetChildAt(i).Visibility = ViewStates.Invisible;
+                }
+
+                table.AddView(GetHeader(String.Empty), table.ChildCount);
+                table.AddView(GetLineSeparator(), table.ChildCount);
+                foreach (var grupoInfo in bll.GerarRelatorioQuantidadeSintetico(Session.UsuarioLogado))
+                {
+                    table.AddView(GetGrupoDetail(grupoInfo), table.ChildCount);
+                    table.AddView(GetLineSeparator(), table.ChildCount);
+                }
+                SetContentView(view);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("RelatorioQuantidadeValorActivity.GerarRelatorioSintetico", ex.Message);
+            }
+        }
+
+        private View GetLineSeparator()
+        {
+            var view = LayoutInflater.Inflate(Resource.Layout.RelatorioQuantidadeValorTemplate, null);
+            var line = view.FindViewById(Resource.Id.lineQuantidadeValor);
+
+            if (line.Parent != null && line.Parent is TableLayout)
+            {
+                (line.Parent as TableLayout).RemoveView(line);
+            }
+
+            return line;
+        }
+
+        private TableRow GetHeader(string title)
+        {
+            var view = LayoutInflater.Inflate(Resource.Layout.RelatorioQuantidadeValorTemplate, null);
+            var headerRow = view.FindViewById<TableRow>(Resource.Id.trQuantidadeValorHeader);
+
+            ((TextView)headerRow.GetChildAt(0)).Text = title;
+
+            if (headerRow.Parent != null && headerRow.Parent is TableLayout)
+            {
+                (headerRow.Parent as TableLayout).RemoveView(headerRow);
+            }
+
+            return headerRow;
+        }
+
+        private TableRow GetGrupoDetail(GrupoInfo grupo)
+        {
+            var view = LayoutInflater.Inflate(Resource.Layout.RelatorioQuantidadeValorTemplate, null);
+            var detailRow = view.FindViewById<TableRow>(Resource.Id.trQuantidadeValorDetail);
+
+            ((TextView)detailRow.GetChildAt(0)).Text = grupo.Nome;
+            ((TextView)detailRow.GetChildAt(1)).Text = grupo.QuantidadeRecebida.ToString();
+            ((TextView)detailRow.GetChildAt(2)).Text = grupo.QuantidadeVendida.ToString();
+            ((TextView)detailRow.GetChildAt(3)).Text = grupo.QuantidadeDevolver.ToString();
+            ((TextView)detailRow.GetChildAt(4)).Text = grupo.ValorPagoDinheiro.ToString("C");
+            ((TextView)detailRow.GetChildAt(5)).Text = grupo.ValorPagoCheque.ToString("C");
+            ((TextView)detailRow.GetChildAt(6)).Text = grupo.ValorPagoBoleto.ToString("C");
+
+            if (detailRow.Parent != null && detailRow.Parent is TableLayout)
+            {
+                (detailRow.Parent as TableLayout).RemoveView(detailRow);
+            }
+
+            return detailRow;
+        }
+
+        private TableRow GetProdutoDetail(ProdutoInfo produto)
+        {
+            var view = LayoutInflater.Inflate(Resource.Layout.RelatorioQuantidadeValorTemplate, null);
+            var detailRow = view.FindViewById<TableRow>(Resource.Id.trQuantidadeValorDetail);
+
+            ((TextView)detailRow.GetChildAt(0)).Text = produto.Nome;
+            ((TextView)detailRow.GetChildAt(1)).Text = produto.QuantidadeRecebida.ToString();
+            ((TextView)detailRow.GetChildAt(2)).Text = produto.QuantidadeVendida.ToString();
+            ((TextView)detailRow.GetChildAt(3)).Text = produto.QuantidadeDevolver.ToString();
+            ((TextView)detailRow.GetChildAt(4)).Text = produto.ValorPagoDinheiro.ToString("C");
+            ((TextView)detailRow.GetChildAt(5)).Text = produto.ValorPagoCheque.ToString("C");
+            ((TextView)detailRow.GetChildAt(6)).Text = produto.ValorPagoBoleto.ToString("C");
+
+            if (detailRow.Parent != null && detailRow.Parent is TableLayout)
+            {
+                (detailRow.Parent as TableLayout).RemoveView(detailRow);
+            }
+
+            return detailRow;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using INetSales.Objects.DbInterfaces;
+using INetSales.Objects.Dtos;
+using Mono.Data.Sqlite;
+
+namespace INetSales.OfflineInterface.Dal
+{
+    public class PesquisaDal : BaseDal2, IOfflinePesquisaDb
+    {
+        #region Implementation of IOfflinePesquisaDb
+
+        public PesquisaDal(SqliteConnection conn) : base(conn)
+        {
+        }
+
+        public void InserirPrecoPesquisa(IEnumerable<ProdutoDto> produtos)
+        {
+            var commandText = new StringBuilder();
+            commandText.AppendFormat("INSERT INTO {0} ", "TPrecoPesquisa");
+            commandText.Append("     (ProdutoId, ProdutoCodigo, DataCriacao, IsAtivo) ");
+            commandText.Append("      VALUES ");
+            commandText.Append("     (@PRODUTO_ID, @CODIGO, @DATA_CRIACAO, @IS_ATIVO) ");
+            foreach (ProdutoDto produto in produtos)
+            {
+                var parameters = new[]
+                                     {
+                                         new SqliteParameter("@PRODUTO_ID", produto.Id),
+                                         new SqliteParameter("@CODIGO", produto.Codigo),
+                                         new SqliteParameter("@DATA_CRIACAO", DateTime.Now),
+                                         new SqliteParameter("@IS_ATIVO", true),
+                                     };
+
+                ExecuteNonQuery(commandText.ToString(), parameters);
+            }
+        }
+
+        public IEnumerable<ProdutoDto> ObterProdutosPrecoPesquisa()
+        {
+            var commandText = new StringBuilder();
+            commandText.Append("SELECT distinct P.* ");
+            commandText.Append("FROM TPrecoPesquisa PP ");
+            commandText.Append("JOIN TProduto P ON PP.ProdutoId = P.ProdutoId ");
+            commandText.Append("WHERE PP.IsAtivo = @IS_ATIVO ");
+            var parameters = new[] { new SqliteParameter("@IS_ATIVO", true), };
+            return GetList(commandText.ToString(), parameters,
+                           reader =>
+                               {
+                                   int idIndex = reader.GetOrdinal("ProdutoId");
+                                   int codigoIndex = reader.GetOrdinal("Codigo");
+                                   int nomeIndex = reader.GetOrdinal("Nome");
+                                   var produto = new ProdutoDto
+                                                     {
+                                                         Id = reader.GetInt32(idIndex),
+                                                         Codigo = reader.GetString(codigoIndex),
+                                                         Nome = reader.GetString(nomeIndex),
+                                                     };
+                                   return produto;
+                               });
+        }
+
+        public IEnumerable<GrupoDto> ObterGruposPesquisa()
+        {
+            var commandText = new StringBuilder();
+            commandText.Append("SELECT * ");
+            commandText.Append("FROM TGrupo ");
+            return GetList(commandText.ToString(), null,
+                           reader =>
+                               {
+                                   int idIndex = reader.GetOrdinal("GrupoId");
+                                   int codigoIndex = reader.GetOrdinal("Codigo");
+                                   int nomeIndex = reader.GetOrdinal("Nome");
+                                   var grupo = new GrupoDto
+                                                   {
+                                                       Id = reader.GetInt32(idIndex),
+                                                       Codigo = reader.GetString(codigoIndex),
+                                                       Nome = reader.GetString(nomeIndex),
+                                                   };
+                                   return grupo;
+                               });
+        }
+
+        public void DesativarProdutosPreco()
+        {
+            var commandText = new StringBuilder();
+            commandText.AppendFormat("UPDATE {0} SET ", "TPrecoPesquisa");
+            commandText.Append(" IsAtivo = @IS_ATIVO");
+
+            var parameters = new[] { new SqliteParameter("@IS_ATIVO", false), };
+
+            ExecuteNonQuery(commandText.ToString(), parameters);
+        }
+
+        #endregion
+    }
+}

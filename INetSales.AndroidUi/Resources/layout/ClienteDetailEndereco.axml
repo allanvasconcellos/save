@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="10dip"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <!-- Rua -->
+  <TextView android:id="@+id/lbRuaEndereco"
+            android:text="Rua:"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+  <EditText android:id="@+id/txtRuaEndereco"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+
+  <!-- Número -->
+  <TextView android:id="@+id/lbNumeroEndereco"
+            android:text="Número:"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+  <EditText android:id="@+id/txtNumeroEndereco"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+
+  <!-- Bairro -->
+  <TextView android:id="@+id/lbBairro"
+            android:text="Bairro:"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+  <EditText android:id="@+id/txtBairro"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+
+  <!-- Cidade -->
+  <TextView android:id="@+id/lbCidade"
+            android:text="Cidade:"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+  <EditText android:id="@+id/txtCidade"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+  
+  <!-- Cep -->
+  <TextView android:id="@+id/lbCep"
+            android:text="Cep:"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+  <EditText android:id="@+id/txtCep"
+            android:padding="3dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+  
+</LinearLayout>

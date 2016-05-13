@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:layout_width="fill_parent"
+    p1:layout_height="fill_parent">
+    <RelativeLayout
+        p1:layout_marginTop="15.0dp"
+        p1:layout_width="fill_parent"
+        p1:layout_height="wrap_content">
+        <ImageButton
+            p1:id="@+id/btDiaAnterior"
+            p1:layout_width="56px"
+            p1:layout_height="56px"
+            p1:layout_marginLeft="10dip"
+            p1:src="@drawable/seta_esquerda" />
+        <TextView
+            p1:text="Dia"
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:layout_marginTop="10dip"
+            p1:layout_centerHorizontal="true"
+            p1:id="@+id/tvDia" />
+        <ImageButton
+            p1:id="@+id/btDiaProximo"
+            p1:layout_width="56px"
+            p1:layout_height="56px"
+            p1:layout_alignParentRight="true"
+            p1:layout_marginRight="10dip"
+            p1:src="@drawable/seta_direita" />
+    </RelativeLayout>
+    <TextView
+        p1:text="Pasta"
+        p1:textAppearance="?android:attr/textAppearanceSmall"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_gravity="center"
+        p1:layout_marginBottom="25.0dp"
+        p1:gravity="center"
+        p1:id="@+id/tvPasta" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:layout_gravity="center"
+        p1:gravity="center"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginBottom="15.0dp">
+        <Button
+            p1:text="Hoje"
+            p1:layout_width="100px"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/btnHoje" />
+        <Button
+            p1:text="Atualizar"
+            p1:layout_width="100px"
+            p1:layout_marginLeft="10.0dp"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/btnAtualizarLista" />
+        <Button
+            p1:text="Clientes"
+            p1:layout_width="100px"
+            p1:layout_marginLeft="10.0dp"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/btnClientesRoteiro" />
+    </LinearLayout>
+    <ListView
+        p1:layout_width="fill_parent"
+        p1:layout_height="550dip"
+        p1:id="@+id/lvRoteiro" />
+    <TextView
+        p1:text="Nenhum roteiro encontrado"
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="fill_parent"
+        p1:layout_height="550dip"
+        p1:gravity="center_horizontal"
+        p1:id="@+id/tvMsgSemCliente"
+        p1:visibility="gone" />
+    <RelativeLayout
+        p1:layout_width="fill_parent"
+        p1:layout_height="fill_parent">
+        <LinearLayout
+            p1:gravity="center"
+            p1:orientation="vertical"
+            p1:layout_centerHorizontal="true"
+            p1:layout_alignParentBottom="true"
+            p1:layout_width="fill_parent"
+            p1:layout_height="fill_parent">
+            <inetsales.androidui.controls.CirclePageIndicator
+                p1:id="@+id/indicator"
+                p1:padding="10dip"
+                p1:layout_height="wrap_content"
+                p1:layout_width="fill_parent" />
+            <android.support.v4.view.ViewPager
+                p1:id="@+id/pager"
+                p1:layout_width="fill_parent"
+                p1:layout_height="fill_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

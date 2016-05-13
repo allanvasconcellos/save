@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+              p1:gravity="center"
+              p1:orientation="horizontal"
+              p1:layout_width="fill_parent"
+              p1:layout_height="wrap_content">
+
+  <!-- Sincronização -->
+  <LinearLayout
+	p1:orientation="vertical"
+	p1:layout_width="wrap_content"
+	p1:layout_height="wrap_content"
+	p1:gravity="center"
+	p1:paddingRight="20dip">
+
+    <ImageButton p1:id="@+id/btSincronizar"
+           p1:layout_width="75px"
+           p1:layout_height="75px"
+           p1:src="@drawable/img_financeiro"/>
+
+    <TextView p1:text="Sincronizar"
+          p1:layout_width="wrap_content"
+          p1:layout_height="fill_parent"
+          p1:gravity="center"
+          p1:textAppearance="?android:attr/textAppearanceSmall"/>
+
+  </LinearLayout>
+
+  <!-- Relatórios -->
+  <LinearLayout
+	p1:orientation="vertical"
+	p1:layout_width="wrap_content"
+	p1:layout_height="wrap_content"
+	p1:gravity="center"
+	p1:paddingRight="20dip">
+
+    <ImageButton p1:id="@+id/btRelatorio"
+           p1:layout_width="75px"
+           p1:layout_height="75px"
+           p1:src="@drawable/img_relatorio"/>
+
+    <TextView p1:text="Relatório"
+          p1:layout_width="fill_parent"
+          p1:layout_height="fill_parent"
+          p1:gravity="center"
+          p1:textAppearance="?android:attr/textAppearanceSmall"/>
+
+  </LinearLayout>
+
+  <!-- Configuração -->
+  <LinearLayout
+	p1:orientation="vertical"
+	p1:layout_width="wrap_content"
+	p1:layout_height="wrap_content"
+	p1:gravity="center"
+	p1:paddingRight="20dip">
+
+    <ImageButton p1:id="@+id/btConfigurar"
+           p1:layout_width="75px"
+           p1:layout_height="75px"
+           p1:src="@drawable/img_configuracao"/>
+
+    <TextView p1:text="Configuração"
+          p1:layout_width="wrap_content"
+          p1:layout_height="fill_parent"
+          p1:gravity="center"
+          p1:textAppearance="?android:attr/textAppearanceSmall"/>
+
+  </LinearLayout>
+
+  <!-- Atualizar versão -->
+  <LinearLayout
+	p1:orientation="vertical"
+	p1:layout_width="wrap_content"
+	p1:layout_height="wrap_content"
+	p1:gravity="center"
+	p1:paddingRight="20dip">
+
+    <ImageButton p1:id="@+id/btVersao"
+           p1:layout_width="75px"
+           p1:layout_height="75px"
+           p1:src="@drawable/img_comunicacao"/>
+
+    <TextView p1:text="Atualizar versão"
+          p1:layout_width="wrap_content"
+          p1:layout_height="fill_parent"
+          p1:gravity="center"
+          p1:textAppearance="?android:attr/textAppearanceSmall"/>
+
+  </LinearLayout>
+
+</LinearLayout>
